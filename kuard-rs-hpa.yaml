@@ -1,0 +1,11 @@
+apiVersion: autoscaling/v1
+metadata:
+  name: kuard-rs
+spec:
+  maxReplicas: 6
+  minReplicas: 3
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: ReplicaSet
+    name: kuard-rs
+  targetCPUUtilizationPercentage: 30

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: centos-ssd
+spec:
+  nodeSelector:
+    ssd: "true"
+  containers:
+  - image: centos
+    name: centos-pod
+    stdin: true
+    tty: true
+

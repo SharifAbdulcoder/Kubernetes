@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    name: kuard-ds
+  name: kuard-ds
+spec:
+  selector:
+    matchLabels:
+      name: kuard-ds-pod
+  template:
+    metadata:
+      labels:
+        name: kuard-ds-pod
+    spec:
+      containers:
+      - image: gcr.io/kuar-demo/kuard-amd64:1
+        name: kuard
+
