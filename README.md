@@ -28,4 +28,17 @@ Keep in mind, google will provide $300 credit for new users on GCP. So you won't
 
 
 ## Pods
-A Pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers
+A Pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers. You can read more at https://kubernetes.io/docs/concepts/workloads/pods/
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: myapp-container
+    image: busybox
+```
