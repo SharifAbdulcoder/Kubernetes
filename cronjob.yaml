@@ -12,7 +12,7 @@ spec:
       containers:
       - name: mongodump
         image: mongo
-        command: ["mongodump","--host","mongodb:27017","--out", "/mnt/nfs/var/nfsshare/backups/`date +'%m-%d-%y'`"]
+        command: ["mongodump","--host","external-service:27017","--out", "/data/path/`date +'%m-%d-%y'`"]
         volumeMounts:
           - mountPath: dump
             name: mongo-dumps
