@@ -57,8 +57,8 @@ spec:
         - name: OS_USERNAME
           value: devops
         - name: OS_PASSWORD
-          value: D3v0p$1!
+          value: ###########
         - name: OS_TENANT_ID
-          value: bd26feb773ad48d5905bb6277592c664
+          value: ####################c664
         - name: OS_DOMAIN_NAME
           value: Default
